@@ -106,6 +106,9 @@ def vote_for_witnesses(tron_client: Tron, owner_address: str, votes: List[Tuple[
         raise
 
 
+import json
+
+
 def get_account_details(tron_client: Tron, address: str) -> dict:
     """
     Get account details from the Tron blockchain.
@@ -118,7 +121,8 @@ def get_account_details(tron_client: Tron, address: str) -> dict:
     """
     try:
         account_info = tron_client.get_account(address)
-        logger.info(f"Account details for {address}: {account_info}")
+        pretty_account_info = json.dumps(account_info, indent=4)
+        logger.info(f"Account details for {address}:\n{pretty_account_info}")
         return account_info
     except AddressNotFound:
         logger.error("Address not found")

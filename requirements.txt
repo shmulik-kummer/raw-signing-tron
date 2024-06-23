@@ -1,0 +1,2 @@
+tronpy==0.2.4
+fireblocks-sdk==1.6.0
