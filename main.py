@@ -7,10 +7,9 @@ from tronpy import Tron
 from tronpy.exceptions import AddressNotFound, UnknownError
 from tronpy.keys import to_hex_address
 from tronpy.tron import Transaction
-import config_template
-from config_template import ASSET_ID, API_SECRET, FIREBLOCKS_API_KEY
+from config import ASSET_ID, API_SECRET, FIREBLOCKS_API_KEY, TRON_NETWORK
 
-client = Tron(network=config_template.TRON_NETWORK)
+client = Tron(network=TRON_NETWORK)
 
 # Initialize Fireblocks SDK
 fireblocks = FireblocksSDK(private_key=API_SECRET, api_key=FIREBLOCKS_API_KEY)

@@ -2,7 +2,7 @@ import json
 
 from main import unfreeze_balance_transaction, sign_transaction, apply_signature_to_transaction, \
     send_signed_transaction_to_tron
-from config_template import RESOURCE,SOURCE_VAULT_ACCOUNT_ID,FROZEN_BALANCE,OWNER_ADDRESS
+from config import RESOURCE,SOURCE_VAULT_ACCOUNT_ID,FROZEN_BALANCE,OWNER_ADDRESS
 
 unfreeze_balance_txn = unfreeze_balance_transaction(OWNER_ADDRESS, FROZEN_BALANCE, RESOURCE)
 

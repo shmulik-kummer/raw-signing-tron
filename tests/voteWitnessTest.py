@@ -1,5 +1,5 @@
 # Create vote witness
-from config_template import OWNER_ADDRESS, SR_ADDRESS, SOURCE_VAULT_ACCOUNT_ID
+from config import OWNER_ADDRESS, SR_ADDRESS, SOURCE_VAULT_ACCOUNT_ID
 from main import vote_for_witnesses, sign_transaction, \
     apply_signature_to_transaction, send_signed_transaction_to_tron
 
