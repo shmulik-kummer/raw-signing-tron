@@ -15,7 +15,7 @@ def sign_transaction(fireblocks_client: FireblocksSDK, vault_id: str, trx_transa
     :param vault_id: The ID of the Fireblocks vault to use for signing.
     :param trx_transaction: The Tron transaction to be signed.
     :param bip44_address_index: The BIP44 address index to use for signing.
-    :return: The signature and transaction ID if the transaction is completed successfully, otherwise None.
+    :return: Return the signature if the transaction is completed successfully, otherwise None.
     """
     try:
         transaction_json = json.dumps(trx_transaction)
@@ -48,7 +48,7 @@ def sign_transaction(fireblocks_client: FireblocksSDK, vault_id: str, trx_transa
         if tx_status == TRANSACTION_STATUS_COMPLETED:
             sig = tx_info["signedMessages"][0]["signature"]
             logger.info(f"Signature obtained for transaction {tx_id}")
-            return sig, tx_id  # Return the signature and the transaction hash
+            return sig
 
         logger.error("Transaction Failed")
         return None
