@@ -78,7 +78,7 @@ def freeze_balance_transaction(tron_client: Tron, owner_address: str, frozen_bal
             amount=frozen_balance,
             resource=resource,
         ).build()
-        logger.info(f"Freeze balance transaction: {freeze_balance_txn}")
+        logger.info(f"Freeze balance transaction:\n {freeze_balance_txn}")
         return freeze_balance_txn
     except Exception as e:
         logger.error(f"Failed to create freeze balance transaction: {e}")
