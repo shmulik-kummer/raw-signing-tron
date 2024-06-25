@@ -22,7 +22,11 @@ This repository provides a library for raw signing of Tron transactions using th
 
 ## Installation
 
+To use this library, you need to have Python installed. You can install the required packages using pip:
 
+```bash
+pip install -r requirements.txt
+```
 
 ## Folder Structure
 
